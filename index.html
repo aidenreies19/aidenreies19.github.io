@@ -32,9 +32,50 @@
       border-left: 4px solid #e74c3c;
       margin: 20px 0;
     }
+    .classified {
+      background-color: #1a1a1a;
+      border: 2px solid #e74c3c;
+      padding: 25px;
+      margin-top: 40px;
+      position: relative;
+    }
+    .classified::before {
+      content: "RISERVATO";
+      position: absolute;
+      top: -15px;
+      left: 20px;
+      background: #e74c3c;
+      color: white;
+      padding: 3px 10px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .classified p {
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      line-height: 1.5;
+      white-space: pre-wrap;
+    }
+    .image-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .image-grid img {
+      width: 100%;
+      border: 2px solid #333;
+    }
   </style>
 </head>
 <body>
+
+  <!-- Audio in sottofondo -->
+  <audio autoplay loop>
+    <source src="battito.mp3" type="audio/mpeg">
+    Il tuo browser non supporta l'audio.
+  </audio>
+
   <h1>Il Caso Aiden Reies</h1>
   <p class="date">Berlino, 2010 - Presente</p>
 
@@ -58,6 +99,36 @@
   <h2>Chi è davvero Aiden?</h2>
   <p>Aiden è nato da madre berlinese e padre messicano. Cresciuto tra due culture, ha sempre avuto difficoltà ad integrarsi. Il suo silenzio è diventato la sua arma e la sua condanna. Dopo il rilascio, è scomparso dai radar. Ma qualcuno sta ancora cercando la verità.</p>
 
-  <p><em>Prossimamente: prove fotografiche, documenti falsificati, testimonianze chiave.</em></p>
+  <hr>
+
+  <h2>Fascicolo Segreto</h2>
+  <div class="classified">
+    <p>
+[Codice Fascicolo: AR-09-783]
+[Livello di sicurezza: ALTO]
+
+Nome: Reies, Aiden
+Età all’arresto: 7 anni
+Luogo del fatto: Grundschule Kottbusser Tor, Berlino
+
+Descrizione dell'incidente:
+- Vittima trovata nel bagno del secondo piano.
+- Nessuna arma rinvenuta.
+- Unico testimone: sparito il giorno dopo.
+
+Note aggiuntive:
+- Tracce ematiche incompatibili con quelle di Aiden.
+- Test del DNA mai ripetuto.
+
+[Prossimo aggiornamento: Immagini del fascicolo originale, documenti manipolati, registrazioni archiviate.]
+    </p>
+  </div>
+
+  <h2>Immagini del Fascicolo</h2>
+  <div class="image-grid">
+    <img src="dossier1.jpg" alt="Documento 1">
+    <img src="dossier2.jpg" alt="Documento 2">
+  </div>
+
 </body>
 </html>
